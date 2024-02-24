@@ -1,0 +1,7 @@
+<app-stepper [steps]="currentSteps" (selectStep)="onSelectStep($event)"></app-stepper>
+<h1>RPG Wizard</h1>
+<app-tile [image]="currentTile.image" [text]="currentTile.text"></app-tile>
+<div>
+  <button (click)="onPrev()">Prev</button>
+  <button (click)="onNext()">Next</button>
+</div>
