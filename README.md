@@ -170,5 +170,50 @@ Create a captivating Studio Ghibli-style illustration of a powerful sorcerer. En
 ### Druid(Pixlr):
 Generate a whimsical Studio Ghibli-inspired image of a druid deeply connected to nature. Picture a character adorned with leaves, accompanied by forest creatures, and surrounded by vibrant flora. Capture the essence of harmony between the druid and the natural world.
 
+# Differences
+### Without ngRX:
+export class RpgWirzardComponent {
+  currentSteps: string[] = [];
+  currentTiles: { image: string; text: string }[] = [];
+  currentStepIndex = 0;
+
+  ngOnInit() {
+    this.updateCurrentSteps();
+    this.updateCurrentTiles();
+  }
+
+  onSelectStep(step: string) {
+    this.currentStepIndex = this.currentSteps.indexOf(step);
+    this.updateCurrentTiles();
+  }
+
+  onPrev() {
+    if (this.currentStepIndex > 0) {
+      this.currentStepIndex--;
+      this.updateCurrentTiles();
+    }
+  }
+
+  onNext() {
+    if (this.currentStepIndex < this.currentSteps.length - 1) {
+      this.currentStepIndex++;
+      this.updateCurrentTiles();
+    }
+  }
+
+  onTileClick() {
+    console.log('Tile clicked!');
+  }
+
+  onStepClick() {
+    console.log('Tile clicked!');
+  }
+
+  private updateCurrentTiles() {}
+
+  private updateCurrentSteps() {}
+}
+
+
 
 
