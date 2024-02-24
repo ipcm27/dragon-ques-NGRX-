@@ -172,6 +172,8 @@ Generate a whimsical Studio Ghibli-inspired image of a druid deeply connected to
 
 # Differences
 ### Without ngRX:
+```typescript
+// rpg-wirzard.component.ts
 export class RpgWirzardComponent {
   currentSteps: string[] = [];
   currentTiles: { image: string; text: string }[] = [];
